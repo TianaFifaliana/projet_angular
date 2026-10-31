@@ -1,0 +1,10 @@
+<h2>Exemple de crud</h2>
+<p>Nombre de produits : {{nombreProduits()}}</p>
+<button (click) ="ajouterProduit()">Ajouter</button>
+<ul>
+    @for(produit of produits();track produit.id){
+        <li>{{produit.nom}} - {{produit.prix}}</li>
+        <button (mouseover)="supprimerProduit(produit.id)">supprimer</button>
+    }
+
+</ul>
